@@ -10,12 +10,7 @@ pipeline {
     }
 
     stages {
-        stage('Pull') {
-            steps {
-                // Get some code from a GitHub repository
-                git branch: 'nexus', url:'https://github.com/wolender/nexus_task.git'
-            }
-        }
+        
         stage('Build') {
             steps{
                sh 'mvn clean install -Dcheckstyle.skip=true'
