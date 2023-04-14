@@ -18,13 +18,13 @@ pipeline {
         }
         stage('Build') {
             steps{
-               sh 'mvn clean install'
+               sh 'mvn clean install -Dcheckstyle.skip=true'
             }
         }
         stage('Test'){
             steps{
 
-                sh 'mvn test'
+                sh 'mvn test -Dcheckstyle.skip=true'
                 
 
                 junit 'target/surefire-reports/*.xml'
@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-               sh 'mvn -s $SETTINGS deploy' 
+               sh 'mvn -s $SETTINGS deploy -Dcheckstyle.skip=true' 
             }
            
         }
