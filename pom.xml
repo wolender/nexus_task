@@ -420,11 +420,11 @@
 <distributionManagement>
    <repository>
       <id>local-nexus</id>
-      <url>http://ec2-3-74-156-147.eu-central-1.compute.amazonaws.com/repository/maven-releases/</url>
+      <url>http://ec2-3-74-156-147.eu-central-1.compute.amazonaws.com:8081/repository/maven-releases/</url>
    </repository>
       <snapshotRepository>
       <id>local-nexus-snap</id>
-      <url>http://ec2-3-74-156-147.eu-central-1.compute.amazonaws.com/repository/maven-snapshots/</url>
+      <url>http://ec2-3-74-156-147.eu-central-1.compute.amazonaws.com:8081/repository/maven-snapshots/</url>
    </snapshotRepository>
 </distributionManagement>
 
