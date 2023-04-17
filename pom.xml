@@ -132,7 +132,7 @@
         <version>1.0.3</version>
         <extensions>true</extensions>
         <configuration>
-          <nexusUrl>http://ec2-3-122-252-65.eu-central-1.compute.amazonaws.com:8081</nexusUrl>
+          <nexusUrl>${NEXUS_SERVER}</nexusUrl>
           
           <!-- The server "id" element from settings to use authentication from settings.xml-->
           <serverId>local-nexus</serverId>
@@ -420,11 +420,11 @@
 <distributionManagement>
    <repository>
       <id>local-nexus</id>
-      <url>http://ec2-3-74-156-147.eu-central-1.compute.amazonaws.com:8081/repository/maven-releases/</url>
+      <url>${NEXUS_SERVER}/repository/maven-releases/</url>
    </repository>
       <snapshotRepository>
       <id>local-nexus-snap</id>
-      <url>http://ec2-3-74-156-147.eu-central-1.compute.amazonaws.com:8081/repository/maven-snapshots/</url>
+      <url>${NEXUS_SERVER}/repository/maven-snapshots/</url>
    </snapshotRepository>
 </distributionManagement>
 
