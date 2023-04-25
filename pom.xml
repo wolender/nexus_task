@@ -132,7 +132,7 @@
         <version>1.0.3</version>
         <extensions>true</extensions>
         <configuration>
-          <nexusUrl>${NEXUS_SERVER}</nexusUrl>
+          <nexusUrl>http://${NEXUS_SERVER}:8081</nexusUrl>
           
           <!-- The server "id" element from settings to use authentication from settings.xml-->
           <serverId>local-nexus</serverId>
@@ -420,11 +420,11 @@
 <distributionManagement>
    <repository>
       <id>local-nexus</id>
-      <url>${NEXUS_SERVER}/repository/maven-releases/</url>
+      <url>http://${NEXUS_SERVER}:8081/repository/maven-releases/</url>
    </repository>
       <snapshotRepository>
       <id>local-nexus-snap</id>
-      <url>${NEXUS_SERVER}/repository/maven-snapshots/</url>
+      <url>http://${NEXUS_SERVER}:8081/repository/maven-snapshots/</url>
    </snapshotRepository>
 </distributionManagement>
 
